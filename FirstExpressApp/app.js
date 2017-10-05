@@ -19,6 +19,15 @@ app.get("/dog", function(req, res) {
 		res.send("WOOF!");
 });
 
+//Create pattern
+app.get("/r/:subredditName", function(req, res){
+	res.send("Welcome to a subreddit!");
+});
+
+app.get("/r/:subredditName/comments/:id/:title/", function(req, res){
+	res.send("Welcome to the comments page");
+});
+
 app.get("*", function(req, res){
 	res.send("You are a star!");
 });
